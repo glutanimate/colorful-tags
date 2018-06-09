@@ -1,0 +1,6 @@
+{
+    "Separator": "::",
+    "completerEnable": true,
+    "completerArbitrarySubstrings": false,
+    "completerHighlightWorkaround": true
+}
