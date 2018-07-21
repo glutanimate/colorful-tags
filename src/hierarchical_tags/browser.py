@@ -10,6 +10,7 @@ Copyright: (c) Patrice Neff 2014 <http://patrice.ch/>
 License: GNU AGPLv3 <https://www.gnu.org/licenses/agpl.html>
 """
 
+from __future__ import unicode_literals
 
 from aqt.qt import *
 
@@ -41,6 +42,8 @@ def userTagTree(self, root, _old):
                     parent, c, None)
                 item.onclick = lambda i=item, t=partial_tag: self.onTagClick(
                     i, t)
+                item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable |
+                              Qt.ItemIsDragEnabled | Qt.ItemIsDropEnabled)
                 item.setIcon(0, QIcon(":/icons/anki-tag.png"))
 
                 tags_tree[partial_tag] = item
