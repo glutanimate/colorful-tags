@@ -18,13 +18,6 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from anki import version as anki_version
 
-from aqt import mw
-
-
-def getConfig():
-    return mw.addonManager.getConfig(__name__)
-
-
-def writeConfig(config):
-    mw.addonManager.writeConfig(__name__, config)
+old_anki = tuple(int(i) for i in anki_version.split(".")) < (2,1,17)
