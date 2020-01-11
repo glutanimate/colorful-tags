@@ -16,6 +16,6 @@ This is an add-on for the spaced-repetition flashcard app [Anki](https://apps.an
 
 - *Copyright © 2014 [Patrice Neff](http://patrice.ch/)*
 
-- *Copyright © 2018 [Aristotelis P.](https://glutanimate.com/)*
+- *Copyright © 2018-2020 [Aristotelis P.](https://glutanimate.com/)*
 
 Licensed under the [GNU AGPLv3](https://www.gnu.org/licenses/agpl.html).
