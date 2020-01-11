@@ -1,0 +1,15 @@
+{
+    "display_name": "Hierarchical Tags 2",
+    "module_name": "hierarchical_tags",
+    "repo_name": "hierarchical-tags",
+    "ankiweb_id": "",
+    "author": "Glutanimate",
+    "contact": "https://glutanimate.com",
+    "homepage": "https://github.com/glutanimate/hierarchical-tags",
+    "copyright_start": 2018,
+    "tags": "",
+    "conflicts": ["1835859645", "829533913", "564851917"],
+    "targets": [
+        "anki21"
+    ]
+}
