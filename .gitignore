@@ -38,3 +38,4 @@ docs/todo.md
 docs/*.todo
 docs/description.html
 tools/test.py
+.pytest_cache/
