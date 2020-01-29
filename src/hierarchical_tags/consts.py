@@ -20,4 +20,4 @@
 
 from anki import version as anki_version
 
-old_anki = tuple(int(i) for i in anki_version.split(".")) < (2,1,17)
+old_anki = tuple(int(i) for i in anki_version.split(".")) < (2, 1, 17)

@@ -20,7 +20,7 @@
 
 from aqt.browser import Browser
 
-from anki.hooks import addHook, wrap
+from anki.hooks import wrap
 
 from .browser import userTagTree, onTagClick, userTagTreeOld, onTagClickOld
 from .consts import old_anki
@@ -33,4 +33,4 @@ def setupAddon():
         Browser.onTagClick = onTagClickOld
         Browser._userTagTree = wrap(Browser._userTagTree, userTagTreeOld, "around")
 
-addHook("profileLoaded", setupAddon)
+setupAddon()
