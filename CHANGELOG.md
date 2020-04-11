@@ -4,6 +4,10 @@ All notable changes to Hierarchical Tags 2 will be documented here. You can clic
 
 ## [Unreleased]
 
+## [2.0.3] - 2020-04-11
+
+### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.3)
+
 ### Fixed
 
 - Make sure to use custom separator in searches (if set)
@@ -44,7 +48,8 @@ All notable changes to Hierarchical Tags 2 will be documented here. You can clic
 
 - Initial release of "[Hierachical Tags](https://ankiweb.net/shared/info/1089921461)" by [Patrice Neff](https://patrice.ch/)
 
-[Unreleased]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.2...HEAD
+[Unreleased]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.3...HEAD
+[2.0.3]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/glutanimate/hierarchical-tags/compare/d36fc72178a4962713ced27910d1c4039810c8f4...v2.0.0
