@@ -7,6 +7,7 @@ All notable changes to Hierarchical Tags 2 will be documented here. You can clic
 ### Fixed
 
 - Make sure to use custom separator in searches (if set)
+- Fix "marked" and "leech" tags missing from sidebar (thanks to @Weyaaron for the report!). To make them appear as they used to in Anki 2.0, I recommend installing the [Customize Sidebar add-on](https://ankiweb.net/shared/info/1988760596)
 
 ### Changed
 
