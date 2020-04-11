@@ -37,9 +37,6 @@ def userTagTreeOld(self, root, _old):
     tags_tree = {}
 
     for t in tags:
-        if t.lower() == "marked" or t.lower() == "leech":
-            continue
-
         components = t.split(SEPARATOR)
         for idx, c in enumerate(components):
             partial_tag = SEPARATOR.join(components[0:idx + 1])
@@ -74,9 +71,6 @@ def userTagTree(self, root, _old):
     tags_tree = {}
 
     for t in tags:
-        if t.lower() == "marked" or t.lower() == "leech":
-            continue
-
         components = t.split(SEPARATOR)
         for idx, c in enumerate(components):
             partial_tag = SEPARATOR.join(components[0 : idx + 1])
