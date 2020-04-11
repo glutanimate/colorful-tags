@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Hierarchical Tags 2",
+  "properties": {
+    "Separator": {
+      "type": "string",
+      "title": "Hierarchical Tag Separator",
+      "description": "Text separating different hierarchical tag levels",
+      "default": "::"
+    }
+  }
+}
