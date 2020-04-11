@@ -2,8 +2,7 @@
 
 # Hierarchical Tags 2 for Anki
 #
-# Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
-# Copyright (C) 2018-2020  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2020  Aristotelis P. <https//glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -18,20 +17,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from anki.hooks import wrap
-from aqt.browser import Browser
+"""
+Version information
+"""
 
-from ._version import __version__  # noqa: F401
-from .browser import onTagClick, onTagClickOld, userTagTree, userTagTreeOld
-from .consts import old_anki
-
-
-def setupAddon():
-    if not old_anki:
-        Browser.onTagClick = onTagClick
-        Browser._userTagTree = wrap(Browser._userTagTree, userTagTree, "around")
-    else:
-        Browser.onTagClick = onTagClickOld
-        Browser._userTagTree = wrap(Browser._userTagTree, userTagTreeOld, "around")
-
-setupAddon()
+__version__ = "2.0.2"
