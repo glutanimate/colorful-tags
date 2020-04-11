@@ -63,7 +63,7 @@ def userTagTreeOld(self, root, _old):
 
 def onTagClickOld(self, item, tag):
     if item.childCount():  # has children
-        self.setFilter('("tag:{0}" or "tag:{0}::*")'.format(tag))
+        self.setFilter(f'("tag:{tag}" or "tag:{tag}{SEPARATOR}*")')
     else:
         self.setFilter("tag", tag)
 
@@ -96,6 +96,6 @@ def userTagTree(self, root, _old):
 
 def onTagClick(self, item, tag):
     if item.children:  # has children
-        self.setFilter('("tag:{0}" or "tag:{0}::*")'.format(tag))
+        self.setFilter(f'("tag:{tag}" or "tag:{tag}{SEPARATOR}*")')
     else:
         self.setFilter("tag", tag)
