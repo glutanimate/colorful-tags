@@ -1,5 +1,11 @@
-### Hierarchical Tags 2: Advanced Configuration
+**Hierarchical Tags 2** supports the following config values:
 
-Please note that you will have to restart Anki for changes to take effect.
+<div style="color: #ff8080; font-weight: bold;">Please note that you will have to restart Anki for these options to apply</div>
 
-- `Separator` [string]: Separator between different hierarchical tag levels. Default: `::`
+**Separator** [string]: Separator text between different hierarchical tag levels. Default: `::`
+
+---
+
+Hierarchical Tags was originally created by [Patrice Neff](https://patrice.ch/).
+
+This updated version is maintained by [Glutanimate](https://glutanimate.com).
