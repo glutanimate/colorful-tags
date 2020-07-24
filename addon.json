@@ -8,7 +8,10 @@
     "homepage": "https://github.com/glutanimate/hierarchical-tags",
     "copyright_start": 2018,
     "tags": "",
-    "conflicts": ["1835859645", "829533913"],
+    "conflicts": [
+        "1835859645",
+        "829533913"
+    ],
     "targets": [
         "anki21"
     ]
