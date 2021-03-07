@@ -8,15 +8,24 @@ All notable changes to Hierarchical Tags 2 will be documented here. You can clic
 
 ### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.4)
 
-## [2.0.3] - 2020-04-11
-
-### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.3)
-
-NOTE: Anki versions 2.1.41 and up now ship with a native version of hierarchical tags. The "Hierarchical Tags 2" add-on will continue to be offered for users on earlier versions of Anki, and might be extended with features built on top of Anki's native functionality in the future. Stay tuned for more on that in the future!
+**NOTE**: Anki versions 2.1.41 and up now ship with a native version of hierarchical tags. The "Hierarchical Tags 2" add-on will continue to be offered for users on earlier versions of Anki, and might be extended with features built on top of Anki's native functionality in the future. Stay tuned for more on that in the future!
 
 ### Fixed
 
 - Fixed start-up error on Anki 2.1.41 by disabling the add-on
+
+## [2.0.3] - 2020-04-11
+
+### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.3)
+
+### Fixed
+
+- Make sure to use custom separator in searches (if set)
+- Fix "marked" and "leech" tags missing from sidebar (thanks to @Weyaaron for the report!). To make them appear as they used to in Anki 2.0, I recommend installing the [Customize Sidebar add-on](https://ankiweb.net/shared/info/1988760596)
+
+### Changed
+
+- Improve config description and add a config schema to check for invalid configurations
 
 ## [2.0.2] - 2020-01-29
 
