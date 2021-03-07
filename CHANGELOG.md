@@ -4,6 +4,10 @@ All notable changes to Hierarchical Tags 2 will be documented here. You can clic
 
 ## [Unreleased]
 
+## [2.0.4] - 2021-03-07
+
+### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.4)
+
 ## [2.0.3] - 2020-04-11
 
 ### [Download](https://github.com/glutanimate/hierarchical-tags/releases/tag/v2.0.3)
@@ -45,7 +49,8 @@ NOTE: Anki versions 2.1.41 and up now ship with a native version of hierarchical
 
 - Initial release of "[Hierachical Tags](https://ankiweb.net/shared/info/1089921461)" by [Patrice Neff](https://patrice.ch/)
 
-[Unreleased]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.3...HEAD
+[Unreleased]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.4...HEAD
+[2.0.4]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/glutanimate/hierarchical-tags/compare/v2.0.0...v2.0.1
