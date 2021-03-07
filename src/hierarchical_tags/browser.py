@@ -4,7 +4,7 @@
 #
 # Copyright (C) Ankitects Pty Ltd and contributors
 # Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
-# Copyright (C) 2018-2020  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -32,6 +32,7 @@ SEPARATOR = getConfig()["Separator"]
 
 # < 2.1.17
 
+
 def userTagTreeOld(self, root, _old):
     tags = sorted(self.col.tags.all())
     tags_tree = {}
@@ -39,7 +40,7 @@ def userTagTreeOld(self, root, _old):
     for t in tags:
         components = t.split(SEPARATOR)
         for idx, c in enumerate(components):
-            partial_tag = SEPARATOR.join(components[0:idx + 1])
+            partial_tag = SEPARATOR.join(components[0 : idx + 1])
             if not tags_tree.get(partial_tag):
                 if idx == 0:
                     parent = root
@@ -47,12 +48,14 @@ def userTagTreeOld(self, root, _old):
                     parent_tag = SEPARATOR.join(components[0:idx])
                     parent = tags_tree[parent_tag]
 
-                item = self.CallbackItem(
-                    parent, c, None)
-                item.onclick = lambda i=item, t=partial_tag: self.onTagClick(
-                    i, t)
-                item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable |
-                            Qt.ItemIsDragEnabled | Qt.ItemIsDropEnabled)
+                item = self.CallbackItem(parent, c, None)
+                item.onclick = lambda i=item, t=partial_tag: self.onTagClick(i, t)
+                item.setFlags(
+                    Qt.ItemIsEnabled
+                    | Qt.ItemIsSelectable
+                    | Qt.ItemIsDragEnabled
+                    | Qt.ItemIsDropEnabled
+                )
                 item.setIcon(0, QIcon(":/icons/tag.svg"))
 
                 tags_tree[partial_tag] = item
@@ -64,7 +67,9 @@ def onTagClickOld(self, item, tag):
     else:
         self.setFilter("tag", tag)
 
+
 # >= 2.1.17
+
 
 def userTagTree(self, root, _old):
     tags = sorted(self.col.tags.all())
@@ -87,6 +92,7 @@ def userTagTree(self, root, _old):
                 tags_tree[partial_tag] = item
 
                 parent.addChild(item)
+
 
 def onTagClick(self, item, tag):
     if item.children:  # has children

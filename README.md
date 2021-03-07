@@ -77,7 +77,7 @@ Contributions are welcome! Please review the [contribution guidelines](./CONTRIB
 
 - *Copyright © 2014 [Patrice Neff](http://patrice.ch/)*
 
-- *Copyright © 2018-2020 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+- *Copyright © 2018-2021 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
 
 Hierarchical Tags 2 is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license. For more information please see the [LICENSE](https://github.com/glutanimate/hierarchical-tags/blob/master/LICENSE) file that accompanied this program.
 

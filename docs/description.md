@@ -27,7 +27,7 @@ Supports both the old and the new sidebar, so it should work on both older and n
 
 *Copyright © 2014 [Patrice Neff](http://patrice.ch/)*
 
-*Copyright © 2018-2020 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+*Copyright © 2018-2021 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
 
 Hierarchical Tags 2 is free and open-source software and licensed under the _GNU AGPLv3_. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. For more information on the license please see the [LICENSE file](https://github.com/glutanimate/hierarchical-tags/blob/master/LICENSE) accompanying this add-on. The source code is available on [![GitHub icon](https://glutanimate.com/logos/github.svg) GitHub](https://github.com/glutanimate/hierarchical-tags). Pull requests and other contributions are welcome!
 

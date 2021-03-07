@@ -3,7 +3,7 @@
 # Hierarchical Tags 2 for Anki
 #
 # Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
-# Copyright (C) 2018-2020  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
