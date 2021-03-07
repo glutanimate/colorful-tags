@@ -19,9 +19,9 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from .consts import old_anki
+from .consts import anki_version_tuple
 
-if not old_anki:
+if anki_version_tuple >= (2, 1, 17):
     from aqt.browser import SidebarItem
 else:
     from aqt.qt import *

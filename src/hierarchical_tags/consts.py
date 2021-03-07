@@ -18,6 +18,12 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from anki import version as anki_version
+try:
+    # be super defensive
+    from anki import version as anki_version
 
-old_anki = tuple(int(i) for i in anki_version.split(".")) < (2, 1, 17)
+    anki_version_tuple = tuple(int(i) for i in anki_version.split("."))
+except Exception:
+    # if version comparison fails, e.g. if future version format changes,
+    # fall back to a high version number
+    anki_version_tuple = (9999, 0, 0)

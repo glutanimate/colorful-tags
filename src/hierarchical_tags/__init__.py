@@ -18,16 +18,20 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from anki.hooks import wrap
-from aqt.browser import Browser
-
 from ._version import __version__  # noqa: F401
-from .browser import onTagClick, onTagClickOld, userTagTree, userTagTreeOld
-from .consts import old_anki
-
+from .consts import anki_version_tuple
 
 def setupAddon():
-    if not old_anki:
+    if anki_version_tuple >= (2, 1, 41):
+        # disable add-on for now
+        print("HT disabled")
+        return
+    
+    from anki.hooks import wrap
+    from aqt.browser import Browser
+    from .browser import onTagClick, onTagClickOld, userTagTree, userTagTreeOld
+    
+    if anki_version_tuple >= (2, 1, 17):
         Browser.onTagClick = onTagClick
         Browser._userTagTree = wrap(Browser._userTagTree, userTagTree, "around")
     else:
