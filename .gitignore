@@ -42,3 +42,4 @@ resources/icons/optional
 # Anki
 src/*/meta.json
 src/*/manifest.json
+src/*/user_data/
