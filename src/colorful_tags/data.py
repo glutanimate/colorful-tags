@@ -13,7 +13,7 @@ _data: Dict[str, Any] = {}
 _tag_data: Dict[str, Any] = _data.get("tags", {})
 
 
-def tag_data():
+def tag_data() -> Dict[str, Any]:
     return _tag_data
 
 
