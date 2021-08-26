@@ -1,0 +1,6 @@
+[tool.mypy]
+show_error_codes = true
+ignore_missing_imports = true
+follow_imports = "silent"
+show_column_numbers = true
+
