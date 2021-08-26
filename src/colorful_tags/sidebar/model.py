@@ -19,10 +19,11 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from aqt.browser import SidebarItem, SidebarItemType
+from aqt.browser import SidebarItemType
 from aqt.qt import *
 from aqt.theme import theme_manager
 
+from .item import PatchedSideBarItem
 
 def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant:
     if not index.isValid():
@@ -38,7 +39,7 @@ def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant
     ):
         return QVariant()
 
-    item: SidebarItem = index.internalPointer()
+    item: PatchedSideBarItem = index.internalPointer()
 
     if role in (Qt.DisplayRole, Qt.EditRole):
         return QVariant(item.name)

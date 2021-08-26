@@ -19,12 +19,23 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from typing import Optional
+
 from aqt.browser import SidebarItem, SidebarItemType
 
 from ..data import tag_data
 
 
-def add_sidebar_item_child(self: SidebarItem, child: SidebarItem) -> None:
+class PatchedSideBarItem(SidebarItem):
+    """Strictly used for type annotations"""
+
+    is_pinned: bool
+    color: Optional[str]
+    pinned_children: int
+
+
+def add_sidebar_item_child(self: PatchedSideBarItem, cb: PatchedSideBarItem) -> None:
+    child = cb
     child._parent_item = self
     if child.item_type == SidebarItemType.TAG:
         child.is_pinned = False
