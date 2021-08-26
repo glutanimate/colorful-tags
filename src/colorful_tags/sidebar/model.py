@@ -19,9 +19,9 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from aqt.browser import SidebarItem, SidebarItemType
 from aqt.qt import *
 from aqt.theme import theme_manager
-from aqt.browser import SidebarItemType, SidebarItem
 
 
 def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant:

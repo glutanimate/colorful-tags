@@ -19,13 +19,11 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from typing import Any, Dict
-
 import json
 from pathlib import Path
+from typing import Any, Dict
 
 from aqt import mw
-
 
 ADDON_PATH = Path(mw.pm.addonFolder()) / __package__
 DATA_PATH = ADDON_PATH / "user_data" / "data.json"

@@ -19,10 +19,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from aqt.qt import *
 from aqt.browser import SidebarItemType
+from aqt.qt import *
 
-from ..data import tag_data, save
+from ..data import save, tag_data
 
 
 def maybe_add_context_actions(sidebar, menu, item, index):
