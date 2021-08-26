@@ -22,17 +22,22 @@
 from typing import TYPE_CHECKING
 
 from aqt.browser import SidebarItemType
-from aqt.qt import *
+from PyQt5.QtCore import QModelIndex
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QColorDialog, QMenu
 
-from .item import PatchedSideBarItem
 from ..data import save, tag_data
+from .item import PatchedSideBarItem
 
 if TYPE_CHECKING:
     from aqt.browser import SidebarTreeView
 
 
 def maybe_add_context_actions(
-    sidebar: "SidebarTreeView", menu: QMenu, item: PatchedSideBarItem, index: QModelIndex
+    sidebar: "SidebarTreeView",
+    menu: QMenu,
+    item: PatchedSideBarItem,
+    index: QModelIndex,
 ):
     if item.item_type == SidebarItemType.TAG:
         menu.addSeparator()

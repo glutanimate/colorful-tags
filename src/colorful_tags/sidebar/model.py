@@ -20,10 +20,12 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from aqt.browser import SidebarItemType
-from aqt.qt import *
 from aqt.theme import theme_manager
+from PyQt5.QtCore import QModelIndex, Qt, QVariant
+from PyQt5.QtGui import QColor, QFont
 
 from .item import PatchedSideBarItem
+
 
 def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant:
     if not index.isValid():
