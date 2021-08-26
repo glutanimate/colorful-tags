@@ -4,11 +4,12 @@ SOURCE_FOLDER = src/
 TEST_FLAGS ?= -n4
 
 check:
-	mypy $(SOURCE_FOLDER)
+	python -m mypy $(SOURCE_FOLDER)
+	python -m flake8 $(SOURCE_FOLDER)
 
 format:
-	isort --recursive $(SOURCE_FOLDER)
-	black $(SOURCE_FOLDER)
+	python -m isort --recursive $(SOURCE_FOLDER)
+	python -m black $(SOURCE_FOLDER)
 
 test:
 	# python -m pytest $(TEST_FLAGS) tests/
