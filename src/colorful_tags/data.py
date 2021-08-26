@@ -25,6 +25,8 @@ from typing import Any, Dict
 
 from aqt import mw
 
+assert mw is not None and mw.pm is not None
+
 ADDON_PATH = Path(mw.pm.addonFolder()) / __package__
 DATA_PATH = ADDON_PATH / "user_data" / "data.json"
 
