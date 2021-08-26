@@ -12,3 +12,24 @@ ensure_newline_before_comments=true
 
 [tool.black]
 # 
+
+[tool.poetry]
+name = "colorful-tags"
+description = "Colorful Tags Anki Add-on"
+authors = ["Glutanimate <glutanimate.com/contact>"]
+license = "AGPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+aab  = { git = "https://github.com/glutanimate/anki-addon-builder.git", tag = "v0.1.5-beta.6" }
+black = "^21.7b0"
+pylint = "^2.10.2"
+mypy = "^0.910"
+isort = "^5.9.3"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
