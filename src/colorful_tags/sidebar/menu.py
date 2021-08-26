@@ -19,13 +19,21 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from typing import TYPE_CHECKING
+
 from aqt.browser import SidebarItemType
 from aqt.qt import *
 
+from .item import PatchedSideBarItem
 from ..data import save, tag_data
 
+if TYPE_CHECKING:
+    from aqt.browser import SidebarTreeView
 
-def maybe_add_context_actions(sidebar, menu, item, index):
+
+def maybe_add_context_actions(
+    sidebar: "SidebarTreeView", menu: QMenu, item: PatchedSideBarItem, index: QModelIndex
+):
     if item.item_type == SidebarItemType.TAG:
         menu.addSeparator()
         pin_action = "Unpin" if item.is_pinned else "Pin"
@@ -35,7 +43,7 @@ def maybe_add_context_actions(sidebar, menu, item, index):
             menu.addAction("Remove Color", lambda: _remove_color(sidebar, item))
 
 
-def _toggle_pin(sidebar, item):
+def _toggle_pin(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
     if tag := tag_data().get(item.full_name, None):
         if tag.get("pin", False):
             del tag["pin"]
@@ -49,7 +57,7 @@ def _toggle_pin(sidebar, item):
     sidebar.refresh()
 
 
-def _assign_color(sidebar, item):
+def _assign_color(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
     color = QColor(item.color or "#000000")
     dialog = QColorDialog(color, parent=sidebar)
     color = dialog.getColor(color)
@@ -61,7 +69,7 @@ def _assign_color(sidebar, item):
         sidebar.refresh()
 
 
-def _remove_color(sidebar, item):
+def _remove_color(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
     if tag := tag_data().get(item.full_name, None):
         if "color" in tag:
             del tag["color"]
