@@ -49,7 +49,7 @@ class UserData:
                 self._data_path.parent.mkdir(exist_ok=True)
             if self._bettertags_data_path.exists():
                 self._migrate_from_bettertags()
-                self.save()
+            self.save()
         self.read()
 
     def read(self):
