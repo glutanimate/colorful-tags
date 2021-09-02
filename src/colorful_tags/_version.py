@@ -3,8 +3,6 @@
 # Colorful Tags for Anki
 #
 # Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
-# Copyright (C) 2021  RumovZ <gp5glkw78@relay.firefox.com>
-# Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -19,8 +17,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from .sidebar import patch_sidebar
+"""
+Version information
+"""
 
-from ._version import __version__  # noqa: F401
-
-patch_sidebar()
+__version__ = "3.0.0-dev.1"
