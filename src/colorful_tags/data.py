@@ -23,11 +23,7 @@ import json
 from pathlib import Path
 from typing import Dict, Literal, TypedDict
 
-from aqt import mw
-
-assert mw is not None and mw.pm is not None
-
-ALL_ADDONS_PATH = Path(mw.pm.addonFolder())
+ALL_ADDONS_PATH = Path(__file__).parent.parent.absolute()
 ADDON_PATH = ALL_ADDONS_PATH / __package__
 
 
@@ -48,6 +44,7 @@ class UserData:
     def __init__(self):
         self.tags: TagDataType = {}
         if not self._data_path.exists():
+            # Initial run
             if not self._data_path.parent.exists():
                 self._data_path.parent.mkdir(exist_ok=True)
             if self._bettertags_data_path.exists():
