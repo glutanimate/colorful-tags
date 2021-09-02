@@ -27,8 +27,10 @@ from aqt import mw
 
 assert mw is not None and mw.pm is not None
 
-ADDON_PATH = Path(mw.pm.addonFolder()) / __package__
-DATA_PATH = ADDON_PATH / "user_data" / "data.json"
+ALL_ADDONS_PATH = Path(mw.pm.addonFolder())
+ADDON_PATH = ALL_ADDONS_PATH / __package__
+DATA_PATH = ADDON_PATH / "user_files" / "data.json"
+
 
 _data: Dict[str, Any] = {}
 _tag_data: Dict[str, Any] = _data.get("tags", {})
@@ -55,7 +57,10 @@ def read():
 
 if not DATA_PATH.parent.exists():
     DATA_PATH.parent.mkdir(exist_ok=True)
-elif not DATA_PATH.exists():
+
+if not DATA_PATH.exists():
+    if BETTERTAGS_DATA_PATH.exists():
+        _migrate_from_bettertags(BETTERTAGS_DATA_PATH, _tag_data)
     save()
 else:
     read()
