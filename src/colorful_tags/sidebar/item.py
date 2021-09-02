@@ -23,7 +23,7 @@ from typing import Optional
 
 from aqt.browser import SidebarItem, SidebarItemType
 
-from ..data import tag_data
+from ..data import user_data
 
 
 class PatchedSideBarItem(SidebarItem):
@@ -40,7 +40,7 @@ def add_sidebar_item_child(self: PatchedSideBarItem, cb: PatchedSideBarItem) -> 
     if child.item_type == SidebarItemType.TAG:
         child.is_pinned = False
         child.color = None
-        if child_data := tag_data().get(child.full_name):
+        if child_data := user_data.tags.get(child.full_name):
             child.color = child_data.get("color", None)
             if child_data.get("pin", False):
                 child.is_pinned = True

@@ -26,7 +26,7 @@ from PyQt5.QtCore import QModelIndex
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QColorDialog, QMenu
 
-from ..data import save, tag_data
+from ..data import user_data
 from .item import PatchedSideBarItem
 
 if TYPE_CHECKING:
@@ -49,16 +49,16 @@ def maybe_add_context_actions(
 
 
 def _toggle_pin(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
-    if tag := tag_data().get(item.full_name, None):
+    if tag := user_data.tags.get(item.full_name, None):
         if tag.get("pin", False):
             del tag["pin"]
             if not len(tag):
-                del tag_data()[item.full_name]
+                del user_data.tags[item.full_name]
         else:
             tag["pin"] = True
     else:
-        tag_data()[item.full_name] = {"pin": True}
-    save()
+        user_data.tags[item.full_name] = {"pin": True}
+    user_data.save()
     sidebar.refresh()
 
 
@@ -67,18 +67,18 @@ def _assign_color(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
     dialog = QColorDialog(color, parent=sidebar)
     color = dialog.getColor(color)
     if color.isValid():
-        if not (tag := tag_data().get(item.full_name, None)):
-            tag = tag_data()[item.full_name] = {}
+        if not (tag := user_data.tags.get(item.full_name, None)):
+            tag = user_data.tags[item.full_name] = {}  # type: ignore
         tag["color"] = color.name()
-        save()
+        user_data.save()
         sidebar.refresh()
 
 
 def _remove_color(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
-    if tag := tag_data().get(item.full_name, None):
+    if tag := user_data.tags.get(item.full_name, None):
         if "color" in tag:
             del tag["color"]
             if not len(tag):
-                del tag_data()[item.full_name]
-            save()
+                del user_data.tags[item.full_name]
+            user_data.save()
             sidebar.refresh()

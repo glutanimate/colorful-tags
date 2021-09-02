@@ -21,7 +21,7 @@
 
 import json
 from pathlib import Path
-from typing import Any, Dict
+from typing import Dict, Literal, TypedDict
 
 from aqt import mw
 
@@ -29,58 +29,62 @@ assert mw is not None and mw.pm is not None
 
 ALL_ADDONS_PATH = Path(mw.pm.addonFolder())
 ADDON_PATH = ALL_ADDONS_PATH / __package__
-DATA_PATH = ADDON_PATH / "user_files" / "data.json"
-BETTERTAGS_DATA_PATH = ALL_ADDONS_PATH / "bettertags" / "user_files" / "data.json"
-
-_data: Dict[str, Any] = {}
-_tag_data: Dict[str, Any] = _data.get("tags", {})
 
 
-def _migrate_from_bettertags(data_path: Path, new_data: Dict[str, Any]):
-    with data_path.open() as data_file:
-        bettertags_data = json.load(data_file)
-    bettertags_tag_state_data = bettertags_data.get("tagState", {})
-
-    for tag, state in bettertags_tag_state_data.items():
-        pinned_state = state.get("pinned")
-        color_state = state.get("color")
-
-        if pinned_state is None and color_state is None:
-            continue
-
-        if tag not in _tag_data:
-            new_data[tag] = {}
-        if pinned_state == 1:
-            new_data[tag]["pin"] = True
-        if color_state:
-            new_data[tag]["color"] = color_state
+class TagState(TypedDict, total=False):
+    pin: bool
+    color: str  # HTML code
 
 
-def tag_data() -> Dict[str, Any]:
-    return _tag_data
+TagDataType = Dict[str, TagState]
+UserDataType = Dict[Literal["tags"], TagDataType]
 
 
-def save():
-    global _data
-    _data["tags"] = _tag_data
-    _data_str = json.dumps(_data)
+class UserData:
 
-    with DATA_PATH.open(mode="w", encoding="UTF-8") as data_file:
-        data_file.write(_data_str)
+    _data_path = ADDON_PATH / "user_files" / "data.json"
+    _bettertags_data_path = ALL_ADDONS_PATH / "bettertags" / "user_files" / "data.json"
+
+    def __init__(self):
+        self.tags: TagDataType = {}
+        if not self._data_path.exists():
+            if not self._data_path.parent.exists():
+                self._data_path.parent.mkdir(exist_ok=True)
+            if self._bettertags_data_path.exists():
+                self._migrate_from_bettertags()
+                self.save()
+        self.read()
+
+    def read(self):
+        with self._data_path.open(encoding="UTF-8") as data_file:
+            data: UserDataType = json.load(data_file)
+        self.tags = data["tags"]
+
+    def save(self):
+        data: UserDataType = {"tags": self.tags}
+        with self._data_path.open(mode="w", encoding="UTF-8") as data_file:
+            data_file.write(json.dumps(data))
+
+    def _migrate_from_bettertags(self):
+        with self._bettertags_data_path.open() as data_file:
+            bettertags_data = json.load(data_file)
+        bettertags_tag_state_data = bettertags_data.get("tagState", {})
+
+        tag_data = self.tags
+
+        for tag, state in bettertags_tag_state_data.items():
+            pinned_state = state.get("pinned")
+            color_state = state.get("color")
+
+            if pinned_state is None and color_state is None:
+                continue
+
+            if tag not in tag_data:
+                tag_data[tag] = {}  # type: ignore
+            if pinned_state == 1:
+                tag_data[tag]["pin"] = True
+            if color_state:
+                tag_data[tag]["color"] = color_state
 
 
-def read():
-    global _data
-    with DATA_PATH.open(encoding="UTF-8") as data_file:
-        _data = json.load(data_file)
-
-
-if not DATA_PATH.parent.exists():
-    DATA_PATH.parent.mkdir(exist_ok=True)
-
-if not DATA_PATH.exists():
-    if BETTERTAGS_DATA_PATH.exists():
-        _migrate_from_bettertags(BETTERTAGS_DATA_PATH, _tag_data)
-    save()
-else:
-    read()
+user_data = UserData()
