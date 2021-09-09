@@ -53,8 +53,12 @@ class UserData:
         self.read()
 
     def read(self):
-        with self._data_path.open(encoding="UTF-8") as data_file:
-            data: UserDataType = json.load(data_file)
+        try:
+            with self._data_path.open(encoding="UTF-8") as data_file:
+                data: UserDataType = json.load(data_file)
+        except Exception as e:
+            print(e)
+            data = {}
         self.tags = data.get("tags", {})
 
     def save(self):
