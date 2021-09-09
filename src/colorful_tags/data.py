@@ -55,7 +55,7 @@ class UserData:
     def read(self):
         with self._data_path.open(encoding="UTF-8") as data_file:
             data: UserDataType = json.load(data_file)
-        self.tags = data["tags"]
+        self.tags = data.get("tags", {})
 
     def save(self):
         data: UserDataType = {"tags": self.tags}
