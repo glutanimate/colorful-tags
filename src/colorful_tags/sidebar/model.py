@@ -19,9 +19,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+
 from aqt.browser import SidebarItemType
-from aqt.theme import theme_manager
 from aqt.qt import *
+from aqt.theme import theme_manager
 
 from .item import PatchedSideBarItem
 
@@ -43,8 +44,6 @@ def model_data(
         return QVariant()
 
     item: PatchedSideBarItem = index.internalPointer()
-    
-    print(item.name)
 
     if role in (Qt.ItemDataRole.DisplayRole, Qt.ItemDataRole.EditRole):
         return QVariant(item.name)
@@ -57,10 +56,21 @@ def model_data(
     elif role == Qt.ItemDataRole.FontRole:
         if item.item_type == SidebarItemType.TAG and item.is_pinned:
             font = QFont()
-            font.setWeight(QFont.Weight.Bold)
+            font.setBold(True)
+            maybe_deinstrument_object(font)
             return QVariant(font)
     elif role == Qt.ItemDataRole.ForegroundRole:
         if item.item_type == SidebarItemType.TAG and item.color:
-            return QVariant(QColor(item.color))
+            color = QColor(item.color)
+            maybe_deinstrument_object(color)
+            return QVariant(color)
 
     return QVariant()
+
+
+def maybe_deinstrument_object(obj):
+    # reverts a QtClassProxy to it's original type
+    # needed due to monkey patching done in aqt.qt5_compat.py
+    # Qt expects a type e.g. QFont and gets a proxy so it does not work
+    if obj.__class__.__name__ == "QtClassProxy":
+        setattr(obj, "__class__", obj.__class__.__bases__[0])
