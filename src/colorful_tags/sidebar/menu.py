@@ -22,9 +22,7 @@
 from typing import TYPE_CHECKING
 
 from aqt.browser import SidebarItemType
-from PyQt5.QtCore import QModelIndex
-from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QColorDialog, QMenu
+from aqt.qt import *
 
 from ..data import user_data
 from .item import PatchedSideBarItem

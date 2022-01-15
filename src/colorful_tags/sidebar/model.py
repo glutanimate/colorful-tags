@@ -21,42 +21,45 @@
 
 from aqt.browser import SidebarItemType
 from aqt.theme import theme_manager
-from PyQt5.QtCore import QModelIndex, Qt, QVariant
-from PyQt5.QtGui import QColor, QFont
+from aqt.qt import *
 
 from .item import PatchedSideBarItem
 
 
-def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant:
+def model_data(
+    self, index: QModelIndex, role: int = Qt.ItemDataRole.DisplayRole
+) -> QVariant:
     if not index.isValid():
         return QVariant()
 
     if role not in (
-        Qt.DisplayRole,
-        Qt.DecorationRole,
-        Qt.ToolTipRole,
-        Qt.EditRole,
-        Qt.FontRole,
-        Qt.ForegroundRole,
+        Qt.ItemDataRole.DisplayRole,
+        Qt.ItemDataRole.DecorationRole,
+        Qt.ItemDataRole.ToolTipRole,
+        Qt.ItemDataRole.EditRole,
+        Qt.ItemDataRole.FontRole,
+        Qt.ItemDataRole.ForegroundRole,
     ):
         return QVariant()
 
     item: PatchedSideBarItem = index.internalPointer()
+    
+    print(item.name)
 
-    if role in (Qt.DisplayRole, Qt.EditRole):
+    if role in (Qt.ItemDataRole.DisplayRole, Qt.ItemDataRole.EditRole):
         return QVariant(item.name)
-    elif role == Qt.ToolTipRole:
+    elif role == Qt.ItemDataRole.ToolTipRole:
         return QVariant(item.tooltip)
-    elif role == Qt.DecorationRole:
+    elif role == Qt.ItemDataRole.DecorationRole:
         return QVariant(theme_manager.icon_from_resources(item.icon))
 
     # add-on roles
-    elif role == Qt.FontRole:
+    elif role == Qt.ItemDataRole.FontRole:
         if item.item_type == SidebarItemType.TAG and item.is_pinned:
             font = QFont()
-            font.setWeight(QFont.Bold)
+            font.setWeight(QFont.Weight.Bold)
             return QVariant(font)
-    elif role == Qt.ForegroundRole:
+    elif role == Qt.ItemDataRole.ForegroundRole:
         if item.item_type == SidebarItemType.TAG and item.color:
             return QVariant(QColor(item.color))
 
