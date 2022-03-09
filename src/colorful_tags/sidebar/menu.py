@@ -21,14 +21,14 @@
 
 from typing import TYPE_CHECKING
 
-from aqt.browser import SidebarItemType
-from aqt.qt import *
+from aqt.browser import SidebarItemType  # type: ignore
+from aqt.qt import QColor, QColorDialog, QMenu, QModelIndex
 
 from ..data import user_data
 from .item import PatchedSideBarItem
 
 if TYPE_CHECKING:
-    from aqt.browser import SidebarTreeView
+    from aqt.browser import SidebarTreeView  # type: ignore
 
 
 def maybe_add_context_actions(

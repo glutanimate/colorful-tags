@@ -21,7 +21,7 @@
 
 from typing import Optional
 
-from aqt.browser import SidebarItem, SidebarItemType
+from aqt.browser import SidebarItem, SidebarItemType  # type: ignore
 
 from ..data import user_data
 

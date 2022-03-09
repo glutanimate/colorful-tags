@@ -20,8 +20,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from aqt.browser import SidebarItemType
-from aqt.qt import *
+from aqt.browser import SidebarItemType  # type: ignore
+from aqt.qt import QColor, QFont, QModelIndex, Qt, QVariant
 from aqt.theme import theme_manager
 
 from .item import PatchedSideBarItem

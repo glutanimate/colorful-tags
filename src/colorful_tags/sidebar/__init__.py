@@ -19,7 +19,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from aqt.browser import SidebarItem, SidebarModel
+from aqt.browser import SidebarItem, SidebarModel  # type: ignore
 from aqt.gui_hooks import browser_sidebar_will_show_context_menu
 
 from .item import add_sidebar_item_child
