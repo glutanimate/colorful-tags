@@ -19,45 +19,58 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+
 from aqt.browser import SidebarItemType
+from aqt.qt import *
 from aqt.theme import theme_manager
-from PyQt5.QtCore import QModelIndex, Qt, QVariant
-from PyQt5.QtGui import QColor, QFont
 
 from .item import PatchedSideBarItem
 
 
-def model_data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> QVariant:
+def model_data(
+    self, index: QModelIndex, role: int = Qt.ItemDataRole.DisplayRole
+) -> QVariant:
     if not index.isValid():
         return QVariant()
 
     if role not in (
-        Qt.DisplayRole,
-        Qt.DecorationRole,
-        Qt.ToolTipRole,
-        Qt.EditRole,
-        Qt.FontRole,
-        Qt.ForegroundRole,
+        Qt.ItemDataRole.DisplayRole,
+        Qt.ItemDataRole.DecorationRole,
+        Qt.ItemDataRole.ToolTipRole,
+        Qt.ItemDataRole.EditRole,
+        Qt.ItemDataRole.FontRole,
+        Qt.ItemDataRole.ForegroundRole,
     ):
         return QVariant()
 
     item: PatchedSideBarItem = index.internalPointer()
 
-    if role in (Qt.DisplayRole, Qt.EditRole):
+    if role in (Qt.ItemDataRole.DisplayRole, Qt.ItemDataRole.EditRole):
         return QVariant(item.name)
-    elif role == Qt.ToolTipRole:
+    elif role == Qt.ItemDataRole.ToolTipRole:
         return QVariant(item.tooltip)
-    elif role == Qt.DecorationRole:
+    elif role == Qt.ItemDataRole.DecorationRole:
         return QVariant(theme_manager.icon_from_resources(item.icon))
 
     # add-on roles
-    elif role == Qt.FontRole:
+    elif role == Qt.ItemDataRole.FontRole:
         if item.item_type == SidebarItemType.TAG and item.is_pinned:
             font = QFont()
-            font.setWeight(QFont.Bold)
+            font.setBold(True)
+            maybe_deinstrument_object(font)
             return QVariant(font)
-    elif role == Qt.ForegroundRole:
+    elif role == Qt.ItemDataRole.ForegroundRole:
         if item.item_type == SidebarItemType.TAG and item.color:
-            return QVariant(QColor(item.color))
+            color = QColor(item.color)
+            maybe_deinstrument_object(color)
+            return QVariant(color)
 
     return QVariant()
+
+
+def maybe_deinstrument_object(obj):
+    # reverts a QtClassProxy to it's original type
+    # needed due to monkey patching done in aqt.qt5_compat.py
+    # Qt expects a type e.g. QFont and gets a proxy so it does not work
+    if obj.__class__.__name__ == "QtClassProxy":
+        setattr(obj, "__class__", obj.__class__.__bases__[0])
