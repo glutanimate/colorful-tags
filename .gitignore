@@ -43,3 +43,4 @@ resources/icons/optional
 src/*/meta.json
 src/*/manifest.json
 src/*/user_files/
+src/*/.compat_notified

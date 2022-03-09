@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Colorful Tags for Anki
+# Hierarchical Tags 2 for Anki
 #
-# Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
-# Copyright (C) 2021  RumovZ <gp5glkw78@relay.firefox.com>
 # Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
+# Copyright (C) 2018-2022  Aristotelis P. <https//glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -19,16 +18,12 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from ._version import __version__  # noqa: F401
-from .compat import anki_version_tuple
+from anki.hooks import wrap
+from aqt.browser import Browser  # type: ignore
 
-if anki_version_tuple > (2, 1, 45):
-    from .sidebar import patch_sidebar
+from .hierarchy import on_tag_click, user_tag_tree
 
-    patch_sidebar()
-else:
-    from .sidebar_legacy import patch_sidebar
-    from .compat import maybe_notify_anki_update_needed
 
-    maybe_notify_anki_update_needed()
-    patch_sidebar()
+def patch_sidebar():
+    Browser.onTagClick = on_tag_click
+    Browser._userTagTree = wrap(Browser._userTagTree, user_tag_tree, "around")
