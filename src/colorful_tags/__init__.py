@@ -24,7 +24,7 @@ from aqt import mw
 from ._version import __version__  # noqa: F401
 from .compat import anki_version_tuple
 
-if anki_version_tuple > (2, 1, 45):
+if anki_version_tuple >= (2, 1, 45):
     from .sidebar import patch_sidebar
 
     patch_sidebar()
@@ -32,9 +32,14 @@ else:
     from aqt.gui_hooks import profile_did_open
 
     from .compat import maybe_notify_anki_update_needed
-    from .sidebar_legacy import patch_sidebar
 
-    patch_sidebar()
+    if anki_version_tuple < (2, 1, 41):
+        # 2.1.41 - 2.1.44 are in a limbo state where neither the old nor new patches
+        # work. So skip them.
+
+        from .sidebar_legacy import patch_sidebar
+
+        patch_sidebar()
 
     def delayed_notification():
         mw.progress.timer(  # type: ignore
