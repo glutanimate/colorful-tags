@@ -44,11 +44,13 @@ def maybe_notify_anki_update_needed():
     showInfo(
         title="Update Anki to enable Colorful Tags",
         text=(
-            "Hi there! Thanks for installing Colorful Tags / updating to it from"
-            " Hierarchical Tags. It looks like you are using an older version of Anki."
-            " To enable tag coloring, please update to Anki 2.1.45 or later. If"
-            " you want to continue using hierarchical tag features only, that's"
-            " completely fine as well! This window will not show up again."
+            "Hi there, thanks for installing <b>Colorful Tags</b> or updating to it"
+            " from Hierarchical Tags!<br><br>It looks like you are using an older"
+            " version of Anki. To enable tag coloring, please update to Anki 2.1.45 or"
+            " later.<br><br>If you want to continue using hierarchical tag features"
+            " only, that's completely fine as well! The add-on will continue working as"
+            " you are used to and this notification will not show up again.<br><br>–"
+            " Glutanimate"
         ),
     )
 
