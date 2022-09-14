@@ -46,7 +46,7 @@ def maybe_notify_anki_update_needed():
     from aqt.utils import showInfo
 
     showInfo(
-        title="Update Anki to enable Colorful Tags",
+        title="Update Anki to Enable Colorful Tags",
         text=(
             "Hi there, thanks for installing <b>Colorful Tags</b> or updating to it"
             " from Hierarchical Tags!<br><br>It looks like you are using an older"
