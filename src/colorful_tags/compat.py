@@ -33,7 +33,11 @@ except Exception:
     # fall back to a high version number
     anki_version_tuple = (9999, 0, 0)
 
-_notified_file = Path(__file__).parent / ".compat_notified"
+_user_files_path = Path(__file__).parent / "user_files"
+if not _user_files_path.exists():
+    _user_files_path.mkdir(exist_ok=True)
+
+_notified_file = _user_files_path / ".compat_notified"
 
 
 def maybe_notify_anki_update_needed():
