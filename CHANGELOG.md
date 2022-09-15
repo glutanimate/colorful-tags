@@ -1,8 +1,21 @@
 # Changelog
 
-All notable changes to Hierarchical Tags 2 will be documented here. You can click on each release number to be directed to a detailed log of all code commits for that particular release. The download links will direct you to the GitHub release page, allowing you to manually install a release if you want.
+All notable changes to Colorful Tags will be documented here. You can click on each release number to be directed to a detailed log of all code commits for that particular release. The download links will direct you to the GitHub release page, allowing you to manually install a release if you want.
 
 ## [Unreleased]
+
+### Added
+
+- Ability to **color** and **pin** tags
+- Support for modern Anki versions, including 2.1.54+
+
+### Changed
+
+- Renamed the add-on to *Colorful Tags (+Hierarchical Tags)*
+- Fully rewrote the add-on with future Anki releases in mind
+- Reworked project structure to simplify collaboration on new features and fixes
+
+Thanks to Rumo and RisingOrange for their contributions towards this release!
 
 ## [2.0.4] - 2021-03-07
 
