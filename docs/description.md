@@ -8,7 +8,7 @@ Add some **colorful flair** and **structure** to your tags!
 
 Colorful Tags evolved from the Hierarchical Tags add-on. Its feature-set differs based on which Anki version you are using:
 
-- If you are using a **modern Anki version** (2.1.45+), which is almost certainly the case: Hierarchical tags are supported out of the box and Colorful Tags just adds the ability to color and pin tags. As Anki's native tag hierarchies are used, the tag separator is hard-coded to `::`
+- If you are using a **modern Anki version** (2.1.45+), which most likely you are: Hierarchical tags are supported out of the box and Colorful Tags just adds the ability to color and pin tags. As Anki's native tag hierarchies are used, the tag separator is hard-coded to `::`
 - If you are using an **older Anki version** (2.1.44 and below): Colorful Tags adds support for tag hierarchies, but **does not** provide the ability to color and pin tags. If you would like that capability on older Anki versions, check out [BetterTags](https://www.patreon.com/posts/bettertags-v1-0-33338657). The tag separator *can* be customized on older Anki versions (2.1.40 and below).
 
 
@@ -72,6 +72,8 @@ Please consider checking out our:
 --------
 
 #### Supporting Glutanimate
+
+<p align="center"><a href="https://www.patreon.com/glutanimate"><img src="https://glutanimate.com/logos/glutanimate_small.png"></a></p>
 
 <p align="center">Make sure to check out my socials for the latest add-on updates and news:</p>
 
