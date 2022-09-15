@@ -1,15 +1,26 @@
 <!-- BANNER -->
 
-An updated version of Patrice Neff's [Hierarchical Tags](https://ankiweb.net/shared/info/1089921461) with support for the new browser sidebar implemented in Anki versions 2.1.17 and up.
+Add some **colorful flair** and **structure** to your tags!
 
-![](https://raw.githubusercontent.com/glutanimate/hierarchical-tags/master/screenshots/screenshot.png)
+![](../screenshots/screenshot.png)
 
-Supports both the old and the new sidebar, so it should work on both older and newer versions of Anki 
+### COMPATIBILITY NOTE
 
-### OTHER NEW FEATURES
+Colorful Tags evolved from the Hierarchical Tags add-on. Its feature-set differs based on which Anki version you are using:
 
-- *Tag-exact search when clicking on a tag in the hierarchy*. That is, only the tags actually within that hierarchy (or just one tag if no hierarchy) will be searched for. This is opposed to the original add-on's behavior which would yield all tags matching a corresponding word stem (e.g. clicking on `lectures::bio` would not just yield `lectures::bio::_various subtags_`, but also `lectures::bioinformatics`, etc.
-- *Customizable tag separator*. By default Hierarchical Tags uses `::` as a tag separator. You may customize this by heading into the add-on's configuration window via Tools → Add-ons → Select "Hierarchical Tags 2" → Click on "Configure". Changes will take effect after restarting Anki.
+- If you are using a **modern Anki version** (2.1.45+), which is almost certainly the case: Hierarchical tags are supported out of the box and Colorful Tags just adds the ability to color and pin tags. As Anki's native tag hierarchies are used, the tag separator is hard-coded to `::`
+- If you are using an **older Anki version** (2.1.44 and below): Colorful Tags adds support for tag hierarchies, but **does not** provide the ability to color and pin tags. If you would like that capability on older Anki versions, check out [BetterTags](https://www.patreon.com/posts/bettertags-v1-0-33338657). The tag separator *can* be customized on older Anki versions (2.1.40 and below).
+
+
+### USAGE
+
+Simply right-click a tag and then either click on *Assign Color* or *Pin*:
+
+![](../screenshots/demo_sidebar.gif)
+
+### LIMITATIONS
+
+- Modifying multiple tags at a time is not supported at the moment. If this is something you'd like, let me know and I'll look into it!
 
 <!-- CHANGELOG -->
 
