@@ -36,7 +36,7 @@ Simply right-click a tag and then either click on *Assign Color* or *Pin*:
 
 A special thanks goes out to [AnKing](https://www.ankipalace.com/) for sponsoring parts of the development of this add-on.
 
-Colorful Tags is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license. For more information please see the [LICENSE](https://github.com/glutanimate/hierarchical-tags/blob/master/LICENSE) file that accompanied this program. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. The source code is available on [![GitHub icon](https://glutanimate.com/logos/github.svg) GitHub](https://github.com/glutanimate/hierarchical-tags). Pull requests and other contributions are welcome!
+Colorful Tags is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license. For more information please see the [LICENSE](https://github.com/glutanimate/colorful-tags/blob/master/LICENSE) file that accompanied this program. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. The source code is available on [![GitHub icon](https://glutanimate.com/logos/github.svg) GitHub](https://github.com/glutanimate/colorful-tags). Pull requests and other contributions are welcome!
 
 <strong>SUPPORT OUR WORK</strong>
 
