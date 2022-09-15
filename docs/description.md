@@ -2,7 +2,7 @@
 
 Add some **colorful flair** and **structure** to your tags!
 
-![](../screenshots/screenshot.png)
+![](https://raw.githubusercontent.com/glutanimate/colorful-tags/main/screenshots/screenshot.png)
 
 ### COMPATIBILITY NOTE
 
@@ -16,7 +16,7 @@ Colorful Tags evolved from the Hierarchical Tags add-on. Its feature-set differs
 
 Simply right-click a tag and then either click on *Assign Color* or *Pin*:
 
-![](../screenshots/demo_sidebar.gif)
+![](https://raw.githubusercontent.com/glutanimate/colorful-tags/main/screenshots/demo_sidebar.gif)
 
 ### LIMITATIONS
 
