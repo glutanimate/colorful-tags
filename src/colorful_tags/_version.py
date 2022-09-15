@@ -2,7 +2,7 @@
 
 # Colorful Tags for Anki
 #
-# Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2018-2022  Aristotelis P. <https//glutanimate.com/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as

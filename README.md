@@ -81,7 +81,7 @@ Contributions are welcome! Please review the [contribution guidelines](./CONTRIB
 
 *Copyright © 2021 [RumovZ](https://github.com/RumovZ)*
 
-*Copyright © 2018-2021 [Aristotelis P.](https://glutanimate.com/) (Glutanimate) and contributors*
+*Copyright © 2018-2022 [Aristotelis P.](https://glutanimate.com/) (Glutanimate) and contributors*
 
 A special thanks goes out to [AnKing](https://www.ankipalace.com/) for sponsoring parts of the development of this add-on.
 

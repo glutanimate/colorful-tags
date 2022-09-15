@@ -2,7 +2,7 @@
 
 # Colorful Tags for Anki
 #
-# Copyright (C) 2018-2021  Aristotelis P. <https//glutanimate.com/>
+# Copyright (C) 2018-2022  Aristotelis P. <https//glutanimate.com/>
 # Copyright (C) 2021  RumovZ <gp5glkw78@relay.firefox.com>
 # Coypright (C) 2014  Patrice Neff <http://patrice.ch/>
 #
