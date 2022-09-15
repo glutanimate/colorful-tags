@@ -1,11 +1,11 @@
 {
     "display_name": "Colorful Tags",
     "module_name": "colorful_tags",
-    "repo_name": "colorful-tags-temp",
+    "repo_name": "colorful-tags",
     "ankiweb_id": "594329229",
     "author": "Glutanimate",
     "contact": "https://glutanimate.com",
-    "homepage": "https://github.com/glutanimate/hierarchical-tags",
+    "homepage": "https://github.com/glutanimate/colorful-tags",
     "copyright_start": 2018,
     "tags": "",
     "conflicts": [
