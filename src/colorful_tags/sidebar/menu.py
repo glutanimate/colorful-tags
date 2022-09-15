@@ -61,7 +61,7 @@ def _toggle_pin(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
 
 
 def _assign_color(sidebar: "SidebarTreeView", item: PatchedSideBarItem):
-    color = QColor(item.color or "#000000")
+    color = QColor(item.color or "#0000FF")
     dialog = QColorDialog(color, parent=sidebar)
     color = dialog.getColor(color)
     if color.isValid():
