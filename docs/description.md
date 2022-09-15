@@ -1,13 +1,5 @@
 <!-- BANNER -->
 
-<b>! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !</b>
-
-<b>IMPORTANT!</b>: It looks like an old version of this add-on contained a wrong add-on conflict specifier. This, coupled with an oversight in Anki's add-on conflict handling, caused the add-on to <b>become disabled upon updating</b>. If the add-on stops working after you update, please head to Tools → Add-ons and <b>manually re-enable</b> "Hierarchical Tags 2". Please also remove any other versions of Hierarchical Tags you might still have installed.
-
-<b>! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !</b>
-
--------------------------------------------------------------
-
 An updated version of Patrice Neff's [Hierarchical Tags](https://ankiweb.net/shared/info/1089921461) with support for the new browser sidebar implemented in Anki versions 2.1.17 and up.
 
 ![](https://raw.githubusercontent.com/glutanimate/hierarchical-tags/master/screenshots/screenshot.png)
@@ -27,14 +19,57 @@ Supports both the old and the new sidebar, so it should work on both older and n
 
 *Copyright © 2014 [Patrice Neff](http://patrice.ch/)*
 
-*Copyright © 2018-2021 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+*Copyright © 2021 [RumovZ](https://github.com/RumovZ)*
 
-Hierarchical Tags 2 is free and open-source software and licensed under the _GNU AGPLv3_. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. For more information on the license please see the [LICENSE file](https://github.com/glutanimate/hierarchical-tags/blob/master/LICENSE) accompanying this add-on. The source code is available on [![GitHub icon](https://glutanimate.com/logos/github.svg) GitHub](https://github.com/glutanimate/hierarchical-tags). Pull requests and other contributions are welcome!
+*Copyright © 2018-2022 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
 
--------------------------------------------------------------
+A special thanks goes out to [AnKing](https://www.ankipalace.com/) for sponsoring parts of the development of this add-on.
 
-<b>! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !</b>
+Colorful Tags is free and open-source software. The add-on code that runs within Anki is released under the GNU AGPLv3 license. For more information please see the [LICENSE](https://github.com/glutanimate/hierarchical-tags/blob/master/LICENSE) file that accompanied this program. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. The source code is available on [![GitHub icon](https://glutanimate.com/logos/github.svg) GitHub](https://github.com/glutanimate/hierarchical-tags). Pull requests and other contributions are welcome!
 
-<b>IMPORTANT!</b>: It looks like an old version of this add-on contained a wrong add-on conflict specifier. This, coupled with an oversight in Anki's add-on conflict handling, caused the add-on to <b>become disabled upon updating</b>. If the add-on stops working after you update, please head to Tools → Add-ons and manually re-enable "Hierarchical Tags 2". Please also remove any other versions of Hierarchical Tags you might still have installed.
+<strong>SUPPORT OUR WORK</strong>
 
-<b>! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !</b>
+If you like Colorful Tags, please give it a <a href="https://ankiweb.net/shared/review/594329229" rel="nofollow"><img src="https://glutanimate.com/logos/rate.svg"> thumbs up</a> and share it with your friends, so that more people can enjoy it!
+
+Colorful Tags was developed as a collaborative effort between [Glutanimate](https://glutanimate.com/) and [AnKing](https://www.ankipalace.com/). If you enjoy the add-on, please consider supporting our work through one of the means listed below:
+
+--------
+
+#### Supporting AnKing
+
+
+Please consider checking out our:
+
+- <a href="https://www.youtube.com/theanking/playlists" rel="nofollow">YouTube Channel</a>- <i>How to use Anki for beginners and advanced users.</i> 
+- <a href="https://www.instagram.com/ankingmed" rel="nofollow">Instagram</a>/<a href="https://www.facebook.com/ankingmed" rel="nofollow">Facebook</a>: <i>@Ankingmed</i>
+- <a href="https://www.ankingmed.com" rel="nofollow">www.AnKingMed.com</a>- <i>Recommended add-ons, tutorials and more including <b>how to download 40+ add-ons in &lt; 5min</b></i>
+- <a href="https://www.ankipalace.com/membership" rel="nofollow">Patreon</a>- <i>Support our work and <b>get individualized Anki help!</b></i>
+
+<p align="center">
+<a href="https://www.ankingmed.com" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/AnKing/AnKingSmall.png?raw=true"></a><a href="https://www.ankingmed.com" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/AnKing/TheAnKing.png?raw=true"></a>
+  <br>
+  <a href="https://www.facebook.com/ankingmed" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/Social/FB.png?raw=true"></a>     <a href="https://www.instagram.com/ankingmed" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/Social/Instagram.png?raw=true"></a>     <a href="https://www.youtube.com/theanking" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/Social/YT.png?raw=true"></a>     <a href="https://www.tiktok.com/@ankingmed" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/Social/TikTok.png?raw=true"></a>     <a href="https://www.twitter.com/ankingmed" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/Social/Twitter.png?raw=true"></a>
+  <br>
+<a href="https://www.ankipalace.com/membership" rel="nofollow"><img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/AnKing/Patreon.jpg?raw=true"></a>
+<br>
+<b>Check out our Anki Mastery Course! (The source of funding for this project)</b><br>
+          <a href="https://courses.ankipalace.com/?utm_source=anking_bg_add-on&amp;utm_medium=anki_add-on_page&amp;utm_campaign=mastery_course" rel="nofollow">https://courses.ankipalace.com</a>
+<a href="https://courses.ankipalace.com/?utm_source=anking_bg_add-on&amp;utm_medium=anki_add-on_page&amp;utm_campaign=mastery_course" rel="nofollow">
+  <br>
+  <img src="https://raw.githubusercontent.com/AnKingMed/My-images/master/AnKing/AnkiPalace.png?raw=true"></a></p>
+
+--------
+
+#### Supporting Glutanimate
+
+<p align="center">Make sure to check out my socials for the latest add-on updates and news:</p>
+
+<p align="center"><a href="https://twitter.com/glutanimate"><img src="https://glutanimate.com/logos/twitter.svg" alt="Twitter bird">@Glutanimate</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/c/glutanimate"><img src="https://glutanimate.com/logos/youtube.svg" alt="YouTube playbutton"> / Glutanimate</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/glutanimate"><img src="https://glutanimate.com/logos/instagram.svg" alt="Instagram"> / @Glutanimate</a></p>
+
+<p align="center">Lots of <b>exclusive add-ons</b> and other goodies also await on my Patreon page. Make sure to take a look!:</p>
+
+
+
+<p align="center">
+<a href="https://www.patreon.com/glutanimate" title="❤️ Support me on Patreon"><img src="https://glutanimate.com/logos/patreon_button.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://glutanimate.com/logos/thanks.svg">
+</p>
