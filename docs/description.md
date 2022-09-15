@@ -32,7 +32,7 @@ Simply right-click a tag and then either click on *Assign Color* or *Pin*:
 
 *Copyright © 2021 [RumovZ](https://github.com/RumovZ)*
 
-*Copyright © 2018-2022 [Aristotelis P.](https://glutanimate.com/) (Glutanimate)*
+*Copyright © 2018-2022 [Aristotelis P.](https://glutanimate.com/) (Glutanimate) and contributors*
 
 A special thanks goes out to [AnKing](https://www.ankipalace.com/) for sponsoring parts of the development of this add-on.
 
