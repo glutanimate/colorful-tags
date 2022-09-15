@@ -4,6 +4,10 @@ All notable changes to Colorful Tags will be documented here. You can click on e
 
 ## [Unreleased]
 
+## [3.0.0] - 2022-09-15
+
+### [Download](https://github.com/glutanimate/colorful-tags-temp/releases/tag/v3.0.0)
+
 ### Added
 
 - Ability to **color** and **pin** tags
