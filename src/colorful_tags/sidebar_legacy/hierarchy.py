@@ -18,9 +18,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-SEPARATOR = "::"
-
 from aqt.browser import SidebarItem  # type: ignore
+from ..config import get_config
+
+SEPARATOR = get_config().get("Separator", "::")
 
 
 def user_tag_tree(self, root, _old):

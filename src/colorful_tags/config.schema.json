@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Colorful Tags",
+  "properties": {
+    "Separator": {
+      "type": "string",
+      "title": "Hierarchical Tag Separator",
+      "description": "Text separating different hierarchical tag levels. Only works on Anki < 2.1.45",
+      "default": "::"
+    }
+  }
+}
