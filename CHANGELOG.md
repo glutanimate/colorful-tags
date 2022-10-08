@@ -2,6 +2,15 @@
 
 All notable changes to Colorful Tags will be documented here. You can click on each release number to be directed to a detailed log of all code commits for that particular release. The download links will direct you to the GitHub release page, allowing you to manually install a release if you want.
 
+If you enjoy Colorful Tags, please consider supporting our work, so we can keep working on projects like this:
+
+|                                                                                                     Glutanimate                                                                                                     |                                                                                                AnKing                                                                                                 |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.patreon.com/glutanimate" rel="nofollow" title="Become a Patron and receive exclusive add-ons & other goodies by Glutanimate!"><img src="https://glutanimate.com/logos/patreon_button.svg"></a> | <a href="https://www.patreon.com/ankingmed" rel="nofollow" title="Become a Patron and receive exclusive content by the AnKing team!"><img src="https://glutanimate.com/logos/patreon_button.svg"></a> |
+
+
+Each contribution is greatly appreciated and will help us <b>update and improve</b> Exam Notifier as time goes by. Thank you!
+
 ## [Unreleased]
 
 ## [3.0.0] - 2022-09-15
